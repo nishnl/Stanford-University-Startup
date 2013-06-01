@@ -1,9 +1,14 @@
+<% if user_signed_in? %>
+	<h1>You're logged in!</h1>
+<% else %>
+
 <div class="center hero-unit">
 <h1>Welcome to IoT Connect!</h1>
 <p>
 	You've found the home page for the Internet of Things Marketplace!
 </p>
 <p>
-  <%= link_to "Sign Up Now!", '#', class: "btn btn-large btn-primary" %>
+  <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-large btn-primary" %>
 </p>
 </div>
+<% end %>
