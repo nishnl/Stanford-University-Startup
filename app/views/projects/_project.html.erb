@@ -5,7 +5,7 @@
 	</p>
 	<p>
 		<strong>
-			Posted by <%= project.user.name %>
+			Posted by <%= link_to project.user.name, project.user %>
 		</strong>
 	</p>
 	<% if current_user == project.user %>

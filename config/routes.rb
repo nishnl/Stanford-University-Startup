@@ -1,8 +1,11 @@
 Stanfordiot::Application.routes.draw do
+  get "users/show"
+
   resources :projects
 
 
   devise_for :users
+  match 'users/:id' => 'users#show', as: :user
 
   get 'about' => 'pages#about'
 
